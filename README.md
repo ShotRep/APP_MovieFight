@@ -9,6 +9,11 @@ Part 2 of the modern bootcamp course, switching from classroom style to applied 
 
 [MDN JS Web Docs - URL](https://developer.mozilla.org/en-US/docs/Web/javascript)
 
+<!-- CHALLENGES -->
+We need to know where to fetch data - what api will we use? - [OMBDAPI - URL](https://omdbapi.com)
+we need to build an autocomplete widget from scratch for practice.
+a clean usable UI, we will use Bulma CSS for this.
+
 <!-- LICENSE -->
 ## License
 
