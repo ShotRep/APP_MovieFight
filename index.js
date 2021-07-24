@@ -10,25 +10,7 @@ const fetchData = async (searchTerm) => {
 
 const input = document.querySelector('input')
 
-const debounce = (cbFunc) => {
-  let timeoutID
-  return (...args) => {
-    if (timeoutID) {
-       clearTimeout(timeoutID)
-    }
-    timeoutID = setTimeout(() => {
-      cbFunc.apply(null, args)
-    }, 1000)
-  }  
-}
-
-let timeoutID
-const onInput = (event) => {
-  if (timeoutID) {
-    clearTimeout(timeoutID)
-  }
-  timeoutID = setTimeout(() => {
+const onInput = debounce(event => {
   fetchData(event.target.value)
-  },1000)
-}
-input.addEventListener('input',onInput)
+  })  
+  input.addEventListener('input',onInput, 500)
